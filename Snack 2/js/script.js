@@ -40,18 +40,16 @@ var squadre = [
 var arrayNomiFalli = [];
 
 for (i=0; i<squadre.length; i++) {
-
+    
+    var squadraFalliSubiti = {};
+    
     squadre[i].punti = randomNumber(1, 100);
     squadre[i].falliSubiti = randomNumber(1, 100);
 
-    arrayNomiFalli.push(squadre[i].nome, squadre[i].falliSubiti)
+    squadraFalliSubiti.nome = squadre[i].nome;
+    squadraFalliSubiti.falliSubiti = squadre[i].falliSubiti;
 
-    // Correzione
-    // var squadraFalliSubiti = {};
-    // squadraFalliSubiti.nome = squadra.nome;
-    // squadraFalliSubiti.falliSubiti = squadra.falliSubiti;
-    // squadraFalliSubiti.push(squadraFalliSubiti);
-
+    arrayNomiFalli.push(squadraFalliSubiti);
 
 }
 console.log(squadre);

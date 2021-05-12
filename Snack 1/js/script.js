@@ -11,7 +11,7 @@ var bici = [
 
     {
         nome: "Saetta",
-        peso: 18,
+        peso: 10,
     },
 
     {
@@ -22,10 +22,11 @@ var bici = [
 ];
 console.log(bici);
 
+
 var biciPeso = 99;
 var biciLeggera = "";
 
-for (var i=0; i<bici.length; i++) { 
+for (var i = 0; i < bici.length; i++) { 
 
     if (bici[i].peso < biciPeso) {
         biciPeso = bici[i].peso;
@@ -35,3 +36,8 @@ for (var i=0; i<bici.length; i++) {
 }
 
 console.log("La bici più leggera è la:", biciLeggera, "con un peso di", biciPeso);
+
+document.getElementById("bici_leggera").innerHTML =
+`
+La bici più leggera è la ${biciLeggera} con un peso di ${biciPeso}
+`
