@@ -4,12 +4,19 @@ Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse prop
 */
 
 // FUNCTION
+
+/*
 function randomNumber (min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+*/
+
+// Arrow Function
+const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) ) + min;
+
 // FUNCTION
 
-var squadre = [
+const squadre = [
     
     {
         nome: "Milan",
@@ -45,20 +52,24 @@ var squadre = [
 
 var arrayNomiFalli = [];
 
-for (i=0; i<squadre.length; i++) {
+for (let i = 0; i < squadre.length; i++) {
     
-    var squadraFalliSubiti = {};
     
     squadre[i].punti = randomNumber(1, 100);
     squadre[i].falliSubiti = randomNumber(1, 100);
-
+    
     // NUOVA CONSEGNA --- --- --- --- ---
-    var {nome, falliSubiti} = squadre[i];
-
-    arrayNomiFalli.push({nome, falliSubiti});
+    const {nome, falliSubiti} = squadre[i];
+    
+    arrayNomiFalli.push({
+        nome, 
+        falliSubiti
+    });
     // NUOVA CONSEGNA --- --- --- --- ---
-
+    
     /*
+    var squadraFalliSubiti = {};
+
     squadraFalliSubiti.nome = squadre[i].nome;
     squadraFalliSubiti.falliSubiti = squadre[i].falliSubiti;
 
