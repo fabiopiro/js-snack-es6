@@ -50,7 +50,7 @@ const squadre = [
 
 ];
 
-var arrayNomiFalli = [];
+const arrayNomiFalli = [];
 
 for (let i = 0; i < squadre.length; i++) {
     
@@ -59,6 +59,7 @@ for (let i = 0; i < squadre.length; i++) {
     squadre[i].falliSubiti = randomNumber(1, 100);
     
     // NUOVA CONSEGNA --- --- --- --- ---
+    // Posso usare "const" poichè le variabili di appoggio a ogni iterazione vengono ricreate da zero
     const {nome, falliSubiti} = squadre[i];
     
     arrayNomiFalli.push({
